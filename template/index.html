@@ -1,0 +1,185 @@
+{% extends 'headerPage.html' %}
+
+{% block content%}
+<!--
+<div class="container" style="margin-top:100px;">
+        <div class="container col-md-6" style="background:lightcyan;">
+ 
+            <form method="post" action="predictImage" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>Upload leaf to predict:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" name="filePath">
+                  <label class="custom-file-label" for="customFile">Choose file</label><br><br>
+                  
+                </div>
+                <div class="container" style="padding:10px;">
+                <center><input type="submit" value="submit" class="btn btn-info"></center>
+              </div>
+            </form>
+          </div>
+        </div>
+          {{filePathName}}
+-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+  <!--
+<div class="container col-md-4" style="margin:auto;background:red; margin-top: 20px;">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="">
+          <img src="https://cdn1-www-wholesomebabyfood.momtastic.com/assets/uploads/2015/04/tomato.jpg" alt="Tomato" style="width:100%;height: 85px;">
+          <div class="caption">
+              <p>Tomato</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="">
+          <img src="https://image.freepik.com/free-vector/three-cartoon-potato_6317-1435.jpg" alt=""style="width:100%;height:85px;" >
+          <div class="caption">
+            <p>Potato</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/fjords.jpg">
+          <img src="https://veggies.ind.in/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/5/_/5.jpg" alt="Brinjal" style="width:100%">
+          <div class="caption">
+            <p>Brinjal</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/fjords.jpg">
+          <img src="https://www.vegetables.co.nz/dmsdocument/36" alt="Brinjal" style="width:100%;height:85px;">
+          <div class="caption">
+            <p>Betroot</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/fjords.jpg">
+          <img src="https://images-eu.ssl-images-amazon.com/images/I/41F62-VbHSL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_.jpg" alt="Brinjal" style="width:100%;height:85px;">
+          <div class="caption">
+            <p>Corn</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/fjords.jpg">
+          <img src="https://cdn.mos.cms.futurecdn.net/EBEXFvqez44hySrWqNs3CZ-1200-80.jpg" alt="Brinjal" style="width:100%;height: 190px;">
+          <div class="caption">
+            <p>Brinjal</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<div class="container w3-content" style="font-family:Times New Roman, Times, serif;max-width:2000px;margin-top:100px">
+
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Select the plant</h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-left">
+    
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Tomato</h3>
+        
+      </div>
+      <a href="tomato" class="d-block mb-4 h-100" data-toggle="popover-hover" title="Tomato" >
+            <img class="img-fluid img-thumbnail" src="https://cdn1-www-wholesomebabyfood.momtastic.com/assets/uploads/2015/04/tomato.jpg" alt="Tomato"style="width:100%;height:190px;">
+            
+      </a>
+      
+          
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Potato</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100" >
+            <img class="img-fluid img-thumbnail"  data-toggle="popover-hover" title="Potato" src="https://image.freepik.com/free-vector/three-cartoon-potato_6317-1435.jpg" alt="Ptato" style="width:100%;height: 190px;">
+          </a>
+         
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Cucumber</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Cucumber" >
+            <img class="img-fluid img-thumbnail" src="https://cdn.mos.cms.futurecdn.net/EBEXFvqez44hySrWqNs3CZ-1200-80.jpg" alt="Cucumber" style="width:100%;height: 190px;">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Corn</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Corn" >
+            <img class="img-fluid img-thumbnail" src="https://images-eu.ssl-images-amazon.com/images/I/41F62-VbHSL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_.jpg" alt="corn" style="width:100%;height:190px;">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Beetroot</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Beetroot" >
+            <img class="img-fluid img-thumbnail"src="https://images-eu.ssl-images-amazon.com/images/I/51dA8aYFw8L._SX300_QL70_ML2_.jpg" alt="Beetroot" style="width:100%;height:190px;">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Brinjal</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Brinjal" >
+            <img class="img-fluid img-thumbnail" src="https://veggies.ind.in/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/5/_/5.jpg" alt="Brinjal" style="width:100%;height:190px;">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Beans</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Beans" >
+            <img class="img-fluid img-thumbnail" src="https://static.toiimg.com/thumb/msid-71233243,imgsize-562395,width-800,height-600,resizemode-75/71233243.jpg" alt="Beans" style="width:100%;height:190px;">
+          </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <div class="container" style="text-align: center;">
+        <h3>Onion</h3>
+      </div>
+      <a  href="tomato" class="d-block mb-4 h-100"  data-toggle="popover-hover" title="Onion" >
+            <img class="img-fluid img-thumbnail" src="https://static.toiimg.com/photo/72185391.cms" alt="onion" style="width:100%;height:190px;">
+          </a>
+    </div>
+    
+  </div>
+
+</div>
+<div class="container" style=" height: 300px;
+width: 50%;"></div>
+<script>
+           
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    </script>
+
+{% endblock %}
+
