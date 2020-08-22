@@ -1,12 +1,15 @@
 {% extends 'headerPage.html' %}
 
 {% block content%}
-<div class="container" style="margin-top:200px; height:500px;">
-    <div class="container col-md-6"  style="text-align: center;">
-
-        <img src={{imgPath}} class="rounded mx-auto d-block" alt="..."  width="400px">
-<h2><i>{{class}}</i></h2>
+<div class="container" style="margin-top:20px;height:500px;background: #f2f2f2;padding-top:120px;">
+    <div class="container col-md-6"  style="text-align: center; ">
+        <!--<img src={{imgPath}} class="rounded mx-auto d-block" alt="Disease is...."  width="400px">-->
+<h2><i>Disease is<br><br>{{class}}</i></h2>
     </div>
-
+    <br><br>
+    <div class="container col-md-2" style="margin:auto;">
+        <button onclick="location.href = 'index';" class="btn" style="background-color:#13abb0 ;" >Go Back</button>
+    </div>
 </div>
+
 {% endblock %}
